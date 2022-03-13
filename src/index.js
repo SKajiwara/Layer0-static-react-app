@@ -1,8 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+
+// Web Vitals
+import reportWebVitals from './reportWebVitals'
+// Dev Tools
+import installDevtools from '@layer0/devtools/install'
+// Service Worker
+import registerServiceWorker from './registerServiceWorker'
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +18,11 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Console Log Web Vitals
+reportWebVitals(console.log)
+
+// Dev Tools
+installDevtools()
+
+// Register Service Worker
+registerServiceWorker()
